@@ -135,7 +135,7 @@ if __name__ == '__main__':
     config.log_interval = 5000
     config.checkpoint = True
     config.checkpoint_interval = 500000
-    config.win_reward = 18  # PongNoFrameskip-v4
+    config.win_reward = 999999  # BeamRider
     config.win_break = True
 
     # handle the atari env
