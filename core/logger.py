@@ -25,8 +25,8 @@ class TensorBoardLogger(object):
     def scalar_summary(self, tag, step, value):
         """Log a scalar variable."""
         with self.writer.as_default():
-        tf.summary.scalar(tag, value, step=step)
-        self.writer.flush()
+            tf.summary.scalar(tag, value, step=step)
+            self.writer.flush()
 
     def image_summary(self, tag, images, step):
         """Log a list of images."""
