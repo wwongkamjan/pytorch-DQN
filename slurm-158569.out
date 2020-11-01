@@ -34,3 +34,5 @@ coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwid
 2020-11-01 00:26:37.579768: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
 2020-11-01 00:26:37.579778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
 2020-11-01 00:26:37.585456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9384 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:40:00.0, compute capability: 7.5)
+/var/spool/slurm/slurmd.spool/job158569/slurm_script: line 13: 121136 Killed                  python3 atari_ddqn.py --train --env BeamRiderNoFrameskip-v4
+slurmstepd: error: Detected 1 oom-kill event(s) in step 158569.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
