@@ -63,7 +63,7 @@ class Trainer:
                 ep_num += 1
                 avg_reward = float(np.mean(all_rewards[-100:]))
                 self.board_logger.scalar_summary('Best 100-episodes average reward', ep_num, avg_reward)
-                self.board_logger.scalar_summary('Reward per frame, fr, all_rewards[-1])
+                self.board_logger.scalar_summary('Reward per frame', fr, all_rewards[-1])
 
                 if fr>= (self.config.frames) or all_rewards[-1] > self.config.win_reward:
                     is_win = True
