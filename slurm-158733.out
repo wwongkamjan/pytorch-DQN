@@ -1,0 +1,4 @@
+srun: error: ioctl(TIOCGWINSZ): Inappropriate ioctl for device
+srun: error: Not using a pseudo-terminal, disregarding --pty option
+/var/spool/slurm/slurmd.spool/job158733/slurm_script: line 13: 78694 Killed                  python3 atari_ddqn.py --train --env BreakoutNoFrameskip-v4
+slurmstepd: error: Detected 1 oom-kill event(s) in step 158733.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

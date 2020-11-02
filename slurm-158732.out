@@ -1,0 +1,25 @@
+srun: error: ioctl(TIOCGWINSZ): Inappropriate ioctl for device
+srun: error: Not using a pseudo-terminal, disregarding --pty option
+srun: error: ioctl(TIOCGWINSZ): Inappropriate ioctl for device
+srun: error: Not using a pseudo-terminal, disregarding --pty option
+/var/spool/slurm/slurmd.spool/job158732/slurm_script: line 14: 73195 Killed                  python3 atari_ddqn.py --train --env BreakoutNoFrameskip-v4
+Traceback (most recent call last):
+  File "/fs/classhomes/fall2020/cmsc828w/c828w084/env/lib/python3.8/site-packages/gym/envs/registration.py", line 132, in spec
+    return self.env_specs[id]
+KeyError: 'QbretNoFrameskip-v4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "atari_ddqn.py", line 142, in <module>
+    env = make_atari(config.env)
+  File "/fs/classhomes/fall2020/cmsc828w/c828w084/pytorch-DQN/common/wrappers.py", line 217, in make_atari
+    env = gym.make(env_id)
+  File "/fs/classhomes/fall2020/cmsc828w/c828w084/env/lib/python3.8/site-packages/gym/envs/registration.py", line 156, in make
+    return registry.make(id, **kwargs)
+  File "/fs/classhomes/fall2020/cmsc828w/c828w084/env/lib/python3.8/site-packages/gym/envs/registration.py", line 100, in make
+    spec = self.spec(path)
+  File "/fs/classhomes/fall2020/cmsc828w/c828w084/env/lib/python3.8/site-packages/gym/envs/registration.py", line 142, in spec
+    raise error.UnregisteredEnv('No registered env with id: {}'.format(id))
+gym.error.UnregisteredEnv: No registered env with id: QbretNoFrameskip-v4
+slurmstepd: error: Detected 1 oom-kill event(s) in step 158732.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
