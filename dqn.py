@@ -99,7 +99,7 @@ if __name__ == '__main__':
     config.epsilon = 1
     config.epsilon_min = 0.01
     config.eps_decay = 500
-    config.frames = 160000
+    config.frames = 5000000
     config.use_cuda = True
     config.learning_rate = 1e-3
     config.max_buff = 1000
@@ -107,7 +107,7 @@ if __name__ == '__main__':
     config.batch_size = 128
     config.print_interval = 200
     config.log_interval = 200
-    config.win_reward = 198     # CartPole-v0
+    config.win_reward = 999999     # BeamRider
     config.win_break = True
 
     env = gym.make(config.env)
