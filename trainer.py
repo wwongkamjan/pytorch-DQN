@@ -65,7 +65,7 @@ class Trainer:
                 self.board_logger.scalar_summary('Best 100-episodes average reward', ep_num, avg_reward)
                 self.board_logger.scalar_summary('Reward per frame', fr, all_rewards[-1])
 
-                if fr>= (self.config.frames) or all_rewards[-1] > self.config.win_reward:
+                if fr>= (self.config.frames):
                     is_win = True
                     self.agent.save_model(self.outputdir, 'best')
                     print('Ran %d episodes best 100-episodes average reward is %3f. Solved after %d trials ✔' % (ep_num, avg_reward, ep_num - 100))
